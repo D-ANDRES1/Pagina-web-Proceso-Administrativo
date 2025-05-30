@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle del Curso - CPI</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="LogoCPI.png" alt="CPI Logo">
+                <span>CPI</span>
+            </a>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="about.html">Sobre Nosotros</a></li>
+                    <li><a href="courses.html">Cursos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="lesson-page">
+        <div class="container">
+            <a href="courses.html" class="back-link">← Volver a todos los cursos</a>
+            
+            <div class="course-detail" id="course-content">
+                <!-- El contenido se cargará dinámicamente aquí -->
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-info">
+                    <img src="LogoCPI.png" alt="CPI Logo" class="footer-logo">
+                    <p>Formando profesionales en tecnología desde 2010</p>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contacto</h4>
+                    <p>Email: info@cpi.edu</p>
+                    <p>Teléfono: +34 912 345 678</p>
+                    <p>Dirección: Calle Aprendizaje, 123, Madrid</p>
+                </div>
+                <div class="footer-social">
+                    <h4>Síguenos</h4>
+                    <div class="social-icons">
+                        <a href="#"><span>FB</span></a>
+                        <a href="#"><span>TW</span></a>
+                        <a href="#"><span>IG</span></a>
+                        <a href="#"><span>IN</span></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 CPI - Calidad Profesional en Informática. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Base de datos de cursos
+        const cursos = {
+            1: {
+                titulo: "Word",
+                categoria: "Ofimática",
+                duracion: "12 semanas",
+                nivel: "Intermedio",
+                descripcion: "Este curso intermedio ofrece una introducción completa al manejo de Word, cubriendo desde herramientas básicas hasta funciones un poco mas avanzadas para crear, editar y dar formato profesional a documentos.",
+                temario: [
+                    "Introducción a la interfaz de Microsoft Word",
+                    "Creación y guardado de documentos",
+                    "Formato de texto: fuentes, tamaño y estilos",
+                    "Aliniación y espacioado entre párrafos",
+                    "Listas con viñetazs y numeradas",
+                    "Manejo de encabejados y pies de pagina",
+                    "Uso de tablas para organizar informacion",
+                    "Inserción de imágenes y forma",
+                    "Diseño de pagina y margenes personalizados",
+                    "Revisión y corrección de documentos",
+                    "Impresión y exportación a PDF",
+                    "Consejos para un uso eficiente de Word",
+                    "Control de saltos de página y sección",
+                    "Proyecto final: Creación de un documento profesional"
+                ],
+                requisitos: "Tener acceso a Microsoft Word",
+                preguntas: [
+                    {
+                        pregunta: "¿Necesito tener Word instalado?",
+                        respuesta: "Sí, se recomienda tener Word 2016 o superior."
+                    },
+                    {
+                        pregunta: "¿El curso incluye certificado?",
+                        respuesta: "Sí, se entrega un certificado digital oficial al finalizar."
+                    }
+                ],
+                extraInfo: "Recursos descargables, plantillas editables y ejercicios prácticos."
+            },
+            2: {
+                titulo: "Excel",
+                categoria: "Ofimática",
+                duracion: "10 semanas",
+                nivel: "Intermedio",
+                descripcion: "Aprende a dominar Excel desde lo básico hasta funciones avanzadas para análisis de datos y automatización.",
+                temario: [
+                    "Introducción a la interfaz de Excel",
+                    "Creación y gestión de hojas de cálculo",
+                    "Formato de celdas y tablas",
+                    "Fórmulas y funciones básicas",
+                    "Funciones avanzadas: BUSCARV, INDICE, COINCIDIR",
+                    "Gráficos y tablas dinámicas",
+                    "Análisis de datos con tablas dinámicas",
+                    "Macros y automatización básica",
+                    "Validación de datos y protección de hojas",
+                    "Trabajo con múltiples hojas y libros",
+                    "Importación y exportación de datos",
+                    "Consejos para optimizar el rendimiento",
+                    "Proyecto final: Análisis de datos real"
+                ],
+                requisitos: "Tener acceso a Microsoft Excel",
+                preguntas: [
+                    {
+                        pregunta: "¿Necesito tener Excel instalado?",
+                        respuesta: "Sí, se recomienda tener Excel 2016 o superior."
+                    },
+                    {
+                        pregunta: "¿El curso incluye certificado?",
+                        respuesta: "Sí, se entrega un certificado digital oficial al finalizar."
+                    }
+                ],
+                extraInfo: "Recursos descargables, plantillas editables y ejercicios prácticos."
+            },
+            3: {
+                titulo: "PowerPoint",
+                categoria: "Ofimática",
+                duracion: "8 semanas",
+                nivel: "Intermedio",
+                descripcion: "Domina PowerPoint para crear presentaciones profesionales y efectivas que impacten a tu audiencia.",
+                temario: [
+                    "Introducción a la interfaz de PowerPoint",
+                    "Creación de diapositivas y gestión de presentaciones",
+                    "Diseño de diapositivas: temas y plantillas",
+                    "Inserción de texto, imágenes y formas",
+                    "Transiciones y animaciones",
+                    "Diseño de diagramas y gráficos",
+                    "Trabajo con multimedia: audio y video",
+                    "Configuración de presentaciones con diapositivas",
+                    "Consejos para presentaciones efectivas",
+                    "Colaboración y revisión",
+                    "Exportación y compartición de presentaciones",
+                    "Proyecto final: Presentación profesional"
+                ],
+                requisitos: "Tener acceso a Microsoft PowerPoint",
+                preguntas: [
+                    {
+                        pregunta: "¿Necesito tener PowerPoint instalado?",
+                        respuesta: "Sí, se recomienda tener PowerPoint 2016 o superior."
+                    },
+                    {
+                        pregunta: "¿El curso incluye certificado?",
+                        respuesta: "Sí, se entrega un certificado digital oficial al finalizar."
+                    }
+                ],
+                extraInfo: "Recursos descargables, plantillas editables y ejercicios prácticos."
+            },
+            4: {
+                titulo: "Python Avanzado",
+                categoria: "Programación",
+                duracion: "14 semanas",
+                nivel: "Avanzado",
+                descripcion: "Curso avanzado de Python para desarrollo de aplicaciones y análisis de datos.",
+                temario: [
+                    "Programación orientada a objetos en Python",
+                    "Manejo de excepciones",
+                    "Trabajo con archivos y bases de datos",
+                    "Desarrollo web con Django",
+                    "Análisis de datos con Pandas",
+                    "Visualización de datos con Matplotlib",
+                    "Introducción a machine learning con Scikit-learn"
+                ],
+                requisitos: "Conocimientos básicos de Python",
+                preguntas: [
+                    {
+                        pregunta: "¿Necesito conocimientos previos?",
+                        respuesta: "Sí, se requieren conocimientos básicos de Python."
+                    },
+                    {
+                        pregunta: "¿El curso incluye proyectos?",
+                        respuesta: "Sí, se desarrolla un proyecto final integrador."
+                    }
+                ],
+                extraInfo: "Acceso a repositorio de código y ejercicios prácticos."
+            },
+            5: {
+                titulo: "Psedocodigo",
+                categoria: "Programación",
+                duracion: "5 semanas",
+                nivel: "Intermedio",
+                descripcion: "Aprende las técnicas fundamentales de la programacion con el psedocodigo.",
+                temario: [
+                    "Introducción al pseudocódigo",
+                    "Estructuras de control: condicionales y bucles",
+                    "Funciones y procedimientos",
+                    "Estructuras de datos: arreglos y listas",
+                    "Algoritmos de búsqueda y ordenamiento",
+                    "Manejo de errores y excepciones",
+                    "Buenas prácticas de programación",
+                    "Proyecto final: Desarrollo de un algoritmo completo"
+                ],
+                requisitos: "Conocimientos básicos de computación y lógica de programación",
+                preguntas: [
+                    {
+                        pregunta: "¿Se requieren conocimientos previos?",
+                        respuesta: "Sí, pseint."
+                    },
+                    {
+                        pregunta: "¿Se incluyen laboratorios prácticos?",
+                        respuesta: "Sí, el curso incluye laboratorios virtuales."
+                    }
+                ],
+                extraInfo: "Acceso a laboratorios virtuales y casos de estudio."
+            },
+            6: {
+                titulo: "Introduccion a la computacion",
+                categoria: "computación",
+                duracion: "4 semanas",
+                nivel: "Principiante",
+                descripcion: "Curso introductorio a la computación para principiantes, cubriendo conceptos básicos de hardware, software y redes.",
+                temario: [
+                    "Historia de la computación",
+                    "Componentes de hardware",
+                    "Sistemas operativos",
+                    "Software de aplicación",
+                    "Redes y conectividad",
+                    "Seguridad informática básica",
+                    "Mantenimiento de equipos"
+                ],
+
+                requisitos: "No se requieren conocimientos previos",
+                preguntas: [
+                    {
+                        pregunta: "¿Qué nivel de conocimiento se requiere?",
+                        respuesta: "No se requieren conocimientos previos, es un curso para principiantes."
+                    },
+                    {
+                        pregunta: "¿Se incluyen prácticas en la nube?",
+                        respuesta: "Sí, el curso incluye acceso a entornos de práctica en la nube."
+                    }
+                ],
+                extraInfo: "Acceso a entornos de práctica en la nube."
+            }
+        };
+
+        // Obtener el ID del curso de la URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const courseId = urlParams.get('course');
+        
+        // Obtener el contenedor del curso
+        const courseContainer = document.getElementById('course-content');
+        
+        // Verificar si el curso existe
+        if (courseId && cursos[courseId]) {
+            const curso = cursos[courseId];
+            
+            // Generar el HTML del curso
+            courseContainer.innerHTML = `
+                <div class="course-header">
+                    <h1>${curso.titulo}</h1>
+                    <div class="course-meta">
+                        <span>⏱ Duración: ${curso.duracion}</span>
+                        <span>Nivel: ${curso.nivel}</span>
+                    </div>
+                </div>
+                
+                <div class="course-content">
+                    <div class="course-description">
+                        <h2>Descripción del Curso</h2>
+                        <p>${curso.descripcion}</p>
+                        
+                        <h2>Temario</h2>
+                        <ul class="syllabus-list">
+                            ${curso.temario.map(item => `<li>${item}</li>`).join('')}
+                        </ul>
+                        
+                        <h2>Requisitos</h2>
+                        <p>${curso.requisitos}</p>
+                    </div>
+                    
+                    <div class="course-sidebar">
+                        <div class="enrollment-card">
+                            <a href="#" class="btn btn-primary btn-block">Inscribirme ahora</a>
+                            <ul class="course-features">
+                                <li>✅ Acceso de por vida al contenido</li>
+                                <li>✅ Certificado oficial CPI</li>
+                                <li>✅ Mentorías personalizadas</li>
+                                <li>✅ Proyectos prácticos reales</li>
+                                <li>✅ Acceso a comunidad exclusiva</li>
+                            </ul>
+                            <div class="ExtraInfo">
+                                <p><strong>Incluye:</strong> ${curso.extraInfo}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <h2 class="SeccionTitle">Preguntas frecuentes</h2>
+                <div class="TestimonioGRID">
+                    ${curso.preguntas.map(pregunta => `
+                        <div class="TestimonioCART">
+                            <p><strong>${pregunta.pregunta}</strong><br>${pregunta.respuesta}</p>
+                        </div>
+                    `).join('')}
+                </div>
+            `;
+        } else {
+            // Mostrar mensaje de error si el curso no existe
+            courseContainer.innerHTML = `
+                <div class="error">
+                    <h1>Curso no encontrado</h1>
+                    <p>El curso que buscas no está disponible. Por favor, regresa a la <a href="courses.html">página de cursos</a>.</p>
+                </div>
+            `;
+        }
+    </script>
+</body>
+</html>

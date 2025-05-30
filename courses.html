@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursos - CPI</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="LogoCPI.png" alt="CPI Logo">
+                <span>CPI</span>
+            </a>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="about.html">Sobre Nosotros</a></li>
+                    <li><a href="courses.html" class="active">Cursos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="courses-page">
+        <section class="courses-hero">
+            <div class="container">
+                <h1>Nuestros Programas de Formación</h1>
+                <p>Descubre nuestra oferta educativa diseñada para impulsar tu carrera en tecnología</p>
+            </div>
+        </section>
+
+        <!-- Filtros por categoría -->
+        <section class="course-categories">
+            <div class="container">
+                <h2 class="section-title">Explora por Categorías</h2>
+                <div class="categories-grid">
+                    <button class="category-btn active">Todos</button>
+                    <button class="category-btn">Programación</button>
+                    <button class="category-btn">Ofimática</button>
+                    <button class="category-btn">Computación</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Listado de cursos -->
+        <section class="courses-list">
+            <div class="container">
+                <div class="courses-grid">
+                    <div class="course-card">
+                        <img src="WordCurso1.jpg" alt="Word">
+                        <div class="course-info">
+                            <span class="course-category">Ofimática</span>
+                            <h3>Word</h3>
+                            <p>Aprende a crear Documentos profesionales y formales de Word.</p>
+                            <a href="lesson.html?course=1" class="btn btn-secondary">Ver detalles</a>
+                        </div>
+                    </div>
+                    <div class="course-card">
+                        <img src="ExcelCurso2.jpg" alt="Excel">
+                        <div class="course-info">
+                            <span class="course-category">Ofimática</span>
+                            <h3>Excel</h3>
+                            <p>Domina el diseño, implementación y administración de las hojas de calculo y graficas con Excel.</p>
+                            <a href="lesson.html?course=2" class="btn btn-secondary">Ver detalles</a>
+                        </div>
+                    </div>
+                    <div class="course-card">
+                        <img src="PowerPointCurso3.jpg" alt="PowerPoint">
+                        <div class="course-info">
+                            <span class="course-category">Ofimática</span>
+                            <h3>PowerPoint</h3>
+                            <p>Crea presentaciones intuitivas que te ayuden a explicar tus ideas y exponer datos.</p>
+                            <a href="lesson.html?course=3" class="btn btn-secondary">Ver detalles</a>
+                        </div>
+                    </div>
+                    <div class="course-card">
+                        <img src="PythonCurso4.jpg" alt="Python">
+                        <div class="course-info">
+                            <span class="course-category">Programación</span>
+                            <h3>Python</h3>
+                            <p>Domina Python para análisis de datos, machine learning y desarrollo backend profesional.</p>
+                            <a href="lesson.html?course=4" class="btn btn-secondary">Ver detalles</a>
+                        </div>
+                    </div>
+                    <div class="course-card">
+                        <img src="PseudocodigoCurso5.jpg" alt="Pseudocódigo">
+                        <div class="course-info">
+                            <span class="course-category">Programación</span>
+                            <h3>Psedocodigo</h3>
+                            <p>Aprende lo basico de programacion con psedocodigo</p>
+                            <a href="lesson.html?course=5" class="btn btn-secondary">Ver detalles</a>
+                        </div>
+                    </div>
+                    <div class="course-card">
+                        <img src="IntroComputacionCurso6.jpg" alt="Introduccion a la Computación">
+                        <div class="course-info">
+                            <span class="course-category">Computación</span>
+                            <h3>Introduccion a la computacion</h3>
+                            <p>Aprende sobre el software y hardware esencial para el funcionamieno de las computadoreas.</p>
+                            <a href="lesson.html?course=6" class="btn btn-secondary">Ver detalles</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <!-- Mismo footer que index.html -->
+          <div class="container">
+            <div class="footer-grid">
+                <div class="footer-info">
+                    <img src="LogoCPI.png" alt="CPI Logo" class="footer-logo">
+                    <p>Formando profesionales en tecnología desde 2010</p>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contacto</h4>
+                    <p>Email: info@cpi.edu.gt</p>
+    <p>Teléfono: +502 1234 5678</p>
+    <p>Dirección: 4ta Avenida 1-32, Zona 3, Santa Catarina Mita, Jutiapa</p>
+                </div>
+                <div class="footer-social">
+                    <h4>Síguenos</h4>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/share/1BoDNF674p/" target="_blank" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.instagram.com/academia_cpi?igsh=MWNmdGw5MTFiOG1zYw==" target="_blank" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://youtu.be/N50cevqaBNM?si=k-SPmM71vJrJAO51" target="_blank" aria-label="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 CPI - Calidad Profesional en Informática. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
